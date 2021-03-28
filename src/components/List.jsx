@@ -24,15 +24,15 @@ const List = () => {
 
     let temp;
     switch (type) {
-      case "remove":
+      case "Remove":
         list.splice(index, 1);
         break;
-      case "up":
+      case "Up":
         temp = list[index];
         list[index] = list[index - 1];
         list[index - 1] = temp;
         break;
-      case "down":
+      case "Down":
         temp = list[index];
         list[index] = list[index + 1];
         list[index + 1] = temp;

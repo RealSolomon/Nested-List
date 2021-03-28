@@ -11,18 +11,18 @@ const CustomElement = (props) => {
   return (
     <li>
       {props.title}
-      {up && <Button alterList={props.alterList} id={props.id} action={"up"} />}
+      {up && <Button alterList={props.alterList} id={props.id} action={"Up"} />}
       {down && (
-        <Button alterList={props.alterList} id={props.id} action={"down"} />
+        <Button alterList={props.alterList} id={props.id} action={"Down"} />
       )}
-      {<Button alterList={props.alterList} id={props.id} action={"remove"} />}
+      {<Button alterList={props.alterList} id={props.id} action={"Remove"} />}
       {
         <button
           onClick={() => {
             setSubList(!sublist);
           }}
         >
-          {`${sublist ? "remove" : "add"} sublist`}
+          {`${sublist ? "Remove" : "Add"} Sublist`}
         </button>
       }
       {sublist && <List />}
