@@ -1,8 +1,9 @@
 import React from "react";
+import { setID } from "../utils/SetId";
 
-const DefaultItem = ({ addItem }) => {
+const DefaultElement = ({ addItem }) => {
   const [title, setTitle] = React.useState("");
-  const id = Math.random().toString(36).substr(2, 9);
+  const [id] = React.useState(setID());
 
   const isEmptyName = () => {
     title.length > 0 ? addItem(title) : alert("Please enter the title.");
@@ -30,4 +31,4 @@ const DefaultItem = ({ addItem }) => {
   );
 };
 
-export default DefaultItem;
+export default DefaultElement;
